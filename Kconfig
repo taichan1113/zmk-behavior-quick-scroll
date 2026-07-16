@@ -1,0 +1,5 @@
+DT_COMPAT_MODULA_BEHAVIOR_QUICK_SCROLL := modula,behavior-quick-scroll
+
+config MODULA_BEHAVIOR_QUICK_SCROLL
+	bool
+	default $(dt_compat_enabled,$(DT_COMPAT_MODULA_BEHAVIOR_QUICK_SCROLL))

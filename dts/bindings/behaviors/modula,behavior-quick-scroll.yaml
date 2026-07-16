@@ -1,0 +1,41 @@
+# Copyright (c) 2026
+# SPDX-License-Identifier: MIT
+
+description: Immediate scroll behavior with double-tap hold acceleration
+
+compatible: "modula,behavior-quick-scroll"
+
+include: one_param.yaml
+
+properties:
+  x-input-code:
+    type: int
+    required: true
+  y-input-code:
+    type: int
+    required: true
+  trigger-period-ms:
+    type: int
+    default: 16
+    description: The time in ms between generated inputs while held.
+  delay-ms:
+    type: int
+    default: 0
+  time-to-max-speed-ms:
+    type: int
+    default: 300
+  acceleration-exponent:
+    type: int
+    default: 0
+  double-tap-ms:
+    type: int
+    default: 200
+    description: Maximum interval between release and next press to enter fast hold.
+  fast-multiplier:
+    type: int
+    default: 8
+    description: Speed multiplier for the second press and hold.
+  tap-step-ms:
+    type: int
+    default: 80
+    description: Amount of movement emitted immediately, expressed as speed over this duration.

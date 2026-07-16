@@ -1,0 +1,4 @@
+zephyr_library()
+
+zephyr_library_sources_ifdef(CONFIG_MODULA_BEHAVIOR_QUICK_SCROLL src/behaviors/behavior_quick_scroll.c)
+zephyr_include_directories(${APPLICATION_SOURCE_DIR}/include)

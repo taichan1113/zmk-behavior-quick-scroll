@@ -1,0 +1,24 @@
+#include <dt-bindings/zmk/pointing.h>
+#include <zephyr/dt-bindings/input/input-event-codes.h>
+
+/ {
+    behaviors {
+        /omit-if-no-ref/ qmsc: quick_mouse_scroll {
+            compatible = "modula,behavior-quick-scroll";
+            #binding-cells = <1>;
+            x-input-code = <INPUT_REL_HWHEEL>;
+            y-input-code = <INPUT_REL_WHEEL>;
+            trigger-period-ms = <16>;
+            time-to-max-speed-ms = <300>;
+            acceleration-exponent = <0>;
+            double-tap-ms = <200>;
+            fast-multiplier = <8>;
+            tap-step-ms = <80>;
+        };
+    };
+
+    qmsc_input_listener: qmsc_input_listener {
+        compatible = "zmk,input-listener";
+        device = <&qmsc>;
+    };
+};
