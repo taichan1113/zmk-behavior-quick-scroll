@@ -1,5 +1,9 @@
 # zmk-behavior-quick-scroll
 
+[English](#english) | [日本語](#japanese)
+
+<a id="english"></a>
+
 A small ZMK module that provides immediate key-driven scrolling with a fast double-tap hold mode.
 It is intended for scroll keys such as `&msc MOVE_Y(120)`, where the input is a key press/release rather than a continuous pointing device event.
 
@@ -152,6 +156,8 @@ If you do not want to use the default `&qmsc` node, define your own behavior in 
 ```
 
 ---
+
+<a id="japanese"></a>
 
 # zmk-behavior-quick-scroll
 
